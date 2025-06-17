@@ -20,3 +20,9 @@ entries.
 ```bash
 python scripts/add_entry.py 4 Dana Marketing
 ```
+
+4. Start the GUI application:
+
+```bash
+python main.py
+```
