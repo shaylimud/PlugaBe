@@ -18,6 +18,7 @@ def load_dataset(path: Path = DEFAULT_FILE) -> List[Dict[str, str]]:
 
 def append_entry(entry: Dict[str, str], path: Path = DEFAULT_FILE) -> None:
     """Append a new entry to the dataset."""
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
     file_exists = path.exists()
     with path.open('a', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=['id', 'name', 'department'])
